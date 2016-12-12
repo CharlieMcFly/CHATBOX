@@ -1,6 +1,3 @@
-/**
- * Created by Charlie
- */
 (function(){
     'use strict';
     angular

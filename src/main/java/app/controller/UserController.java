@@ -62,9 +62,6 @@ public class UserController {
 		
 		User user = new User(userMap.get("username").toString(), userMap.get("password").toString());
 		if(userMap.get("email") != null) user.setEmail(userMap.get("email").toString());
-		if(userMap.get("idGoogle") != null) user.setIdGoogle(userMap.get("idGoogle").toString());
-		if(userMap.get("idFacebook") != null) user.setIdFacebook(userMap.get("idFacebook").toString());
-		if(userMap.get("idTweeter") != null) user.setIdTwitter(userMap.get("idTweeter").toString());
 		if(userMap.get("photo") != null) user.setPhoto(userMap.get("photo").toString());
 		user.setId(userId);
 

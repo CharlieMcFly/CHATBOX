@@ -11,9 +11,6 @@ public class User {
   private String username;
   private String password;
   private String photo;
-  private String idFacebook;
-  private String idTwitter;
-  private String idGoogle;
   private String email;
   
 	  
@@ -52,30 +49,6 @@ public class User {
 
 	public void setPhoto(String photo) {
 		this.photo = photo;
-	}
-
-	public String getIdFacebook() {
-		return idFacebook;
-	}
-
-	public void setIdFacebook(String idFacebook) {
-		this.idFacebook = idFacebook;
-	}
-
-	public String getIdTwitter() {
-		return idTwitter;
-	}
-
-	public void setIdTwitter(String idTwitter) {
-		this.idTwitter = idTwitter;
-	}
-
-	public String getIdGoogle() {
-		return idGoogle;
-	}
-
-	public void setIdGoogle(String idGoogle) {
-		this.idGoogle = idGoogle;
 	}
 
 	public String getEmail() {
