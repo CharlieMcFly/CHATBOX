@@ -1,5 +1,6 @@
 package app.controller;
 
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +27,7 @@ public class UserController {
 		User user = new User(userMap.get("username").toString(), userMap.get("password").toString());
 
 		Map<String, Object> response = new LinkedHashMap<String, Object>();
-		response.put("message", "user created successfully");
+		response.put("message", "User created successfully");
 		response.put("user", userRepository.save(user));
 		return response;
 	}
@@ -66,7 +67,7 @@ public class UserController {
 		user.setId(userId);
 
 		Map<String, Object> response = new LinkedHashMap<String, Object>();
-		response.put("message", "user Updated successfully");
+		response.put("message", "User updated successfully");
 		response.put("user", userRepository.save(user));
 		return response;
 	}
@@ -77,6 +78,15 @@ public class UserController {
 		Map<String, Object> response = new LinkedHashMap<String, Object>();
 		response.put("totalusers", users.size());
 		response.put("users", users);
+		return response;
+	}
+	
+	@RequestMapping(method = RequestMethod.DELETE, value = "/{userId}")
+	public Map<String, String> deleteUser(@PathVariable("userId") String userId) {
+		userRepository.delete(userId);
+		Map<String, String> response = new HashMap<String, String>();
+		response.put("message", "user deleted successfully");
+
 		return response;
 	}
 }
